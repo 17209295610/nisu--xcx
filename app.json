@@ -1,10 +1,5 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/explore/index",
-    "pages/creation/index",
-    "pages/product/index"
-  ],
+  "pages": ["pages/index/index", "pages/creation/index", "pages/product/index"],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#4A3428",
@@ -22,26 +17,20 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "/assets/icons/default-home.png",
-        "selectedIconPath": "/assets/icons/default-home-active.png"
-      },
-      {
-        "pagePath": "pages/explore/index",
-        "text": "探索",
-        "iconPath": "/assets/icons/default-profile.png",
-        "selectedIconPath": "/assets/icons/default-profile-active.png"
+        "iconPath": "assets/images/tabbar/首页.png",
+        "selectedIconPath": "assets/images/tabbar/首页.png"
       },
       {
         "pagePath": "pages/creation/index",
         "text": "创作",
-        "iconPath": "/assets/icons/default-custom.png",
-        "selectedIconPath": "/assets/icons/default-custom-active.png"
+        "iconPath": "assets/images/tabbar/创作.png",
+        "selectedIconPath": "assets/images/tabbar/创作.png"
       },
       {
         "pagePath": "pages/product/index",
         "text": "产品",
-        "iconPath": "/assets/icons/default-gallery.png",
-        "selectedIconPath": "/assets/icons/default-gallery-active.png"
+        "iconPath": "assets/images/tabbar/产品.png",
+        "selectedIconPath": "assets/images/tabbar/产品.png"
       }
     ]
   },
