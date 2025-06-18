@@ -1,0 +1,27 @@
+{
+  "name": "clay-ai-miniprogram",
+  "version": "1.0.0",
+  "description": "泥遇AI：智能泥塑创想馆 - 微信小程序",
+  "scripts": {
+    "dev": "npm run build:dev",
+    "build": "npm run build:prod",
+    "build:dev": "cross-env NODE_ENV=development",
+    "build:prod": "cross-env NODE_ENV=production"
+  },
+  "keywords": [
+    "微信小程序",
+    "泥塑",
+    "AI",
+    "艺术创作"
+  ],
+  "author": "泥遇AI团队",
+  "license": "MIT",
+  "dependencies": {
+    "@vant/weapp": "^1.10.19",
+    "miniprogram-api-promise": "^1.0.4"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "prettier": "^3.0.0"
+  }
+}

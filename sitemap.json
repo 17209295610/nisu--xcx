@@ -1,0 +1,9 @@
+{
+  "desc": "凤翔泥塑小程序的sitemap配置",
+  "rules": [
+    {
+      "action": "allow",
+      "page": "*"
+    }
+  ]
+} 

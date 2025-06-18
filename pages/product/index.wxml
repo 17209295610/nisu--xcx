@@ -1,0 +1,29 @@
+<view class="product-container">
+  <loading wx:if="{{loading}}" />
+  
+  <scroll-view class="categories" scroll-x>
+    <view 
+      class="category-item {{currentCategory === item ? 'active' : ''}}" 
+      wx:for="{{categories}}" 
+      wx:key="*this"
+      data-category="{{item}}"
+      bindtap="switchCategory"
+    >
+      {{item}}
+    </view>
+  </scroll-view>
+
+  <view class="product-list">
+    <view class="product-item" wx:for="{{productList}}" wx:key="id">
+      <image class="product-cover" src="{{item.cover}}" mode="aspectFill" />
+      <view class="product-content">
+        <text class="product-name">{{item.name}}</text>
+        <text class="product-desc">{{item.desc}}</text>
+        <view class="product-footer">
+          <text class="product-price">¥{{item.price}}</text>
+          <button class="buy-btn" size="mini">购买</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view> 

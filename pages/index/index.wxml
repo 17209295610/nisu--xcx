@@ -1,0 +1,19 @@
+<!-- 首页容器 -->
+<view class="container">
+  <!-- 轮播图区域 -->
+  <view class="swiper-section">
+    <swiper class="banner-swiper" 
+            indicator-dots="{{true}}" 
+            autoplay="{{true}}" 
+            interval="{{4000}}" 
+            duration="{{500}}"
+            circular="{{true}}" 
+            indicator-color="rgba(255, 255, 255, .3)"
+            indicator-active-color="#ffffff">
+      <swiper-item wx:for="{{bannerList}}" wx:key="id" bindtap="onBannerTap" data-item="{{item}}">
+        <image src="{{item.imageUrl}}" mode="aspectFill" class="banner-image" lazy-load/>
+        <view class="banner-title">{{item.title}}</view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view> 

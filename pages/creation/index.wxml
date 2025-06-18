@@ -1,0 +1,44 @@
+<view class="container">
+  <view class="steps">
+    <view class="step-list">
+      <block wx:for="{{steps}}" wx:key="title">
+        <view class="step {{index === currentStep ? 'active' : ''}} {{index < currentStep ? 'completed' : ''}}">
+          <view class="step-number">{{index + 1}}</view>
+          <view class="step-content">
+            <text class="step-title">{{item.title}}</text>
+            <text class="step-desc">{{item.desc}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view class="content">
+    <!-- 根据currentStep显示不同的内容 -->
+    <block wx:if="{{currentStep === 0}}">
+      <view class="theme-selection">
+        <!-- 主题选择内容 -->
+      </view>
+    </block>
+    <block wx:elif="{{currentStep === 1}}">
+      <view class="design">
+        <!-- 设计构图内容 -->
+      </view>
+    </block>
+    <block wx:elif="{{currentStep === 2}}">
+      <view class="guide">
+        <!-- 制作指导内容 -->
+      </view>
+    </block>
+    <block wx:else>
+      <view class="completion">
+        <!-- 完成展示内容 -->
+      </view>
+    </block>
+  </view>
+
+  <view class="buttons">
+    <button wx:if="{{currentStep > 0}}" class="prev-btn" bindtap="prevStep">上一步</button>
+    <button wx:if="{{currentStep < steps.length - 1}}" class="next-btn" bindtap="nextStep">下一步</button>
+  </view>
+</view> 
