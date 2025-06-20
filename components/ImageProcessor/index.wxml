@@ -1,0 +1,14 @@
+<view class="image-processor">
+  <canvas 
+    type="2d" 
+    id="imageCanvas" 
+    style="width: {{canvasWidth}}px; height: {{canvasHeight}}px; visibility: hidden;"
+  ></canvas>
+  
+  <image 
+    wx:if="{{processedImageUrl}}" 
+    src="{{processedImageUrl}}" 
+    mode="widthFix" 
+    class="processed-image"
+  ></image>
+</view> 

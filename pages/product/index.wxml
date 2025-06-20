@@ -1,6 +1,11 @@
 <view class="product-container">
   <loading wx:if="{{loading}}" />
   
+  <!-- 添加预览图片区域 -->
+  <view class="preview-image-container">
+    <image class="preview-image" src="{{previewImage || '../../assets/images/preview-default.jpg'}}" mode="aspectFill"></image>
+  </view>
+
   <scroll-view class="categories" scroll-x>
     <view 
       class="category-item {{currentCategory === item ? 'active' : ''}}" 
@@ -23,6 +28,145 @@
           <text class="product-price">¥{{item.price}}</text>
           <button class="buy-btn" size="mini">购买</button>
         </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 顶部图标导航 -->
+  <view class="icon-nav">
+    <view class="icon-item {{currentTab === 0 ? 'active' : ''}}" bindtap="switchTab" data-index="0" hover-class="none">
+      <view class="icon-image">
+        <text class="icon-text">泥塑</text>
+      </view>
+    </view>
+    <view class="icon-item {{currentTab === 1 ? 'active' : ''}}" bindtap="switchTab" data-index="1" hover-class="none">
+      <view class="icon-image">
+        <text class="icon-text">挂片</text>
+      </view>
+    </view>
+    <view class="icon-item {{currentTab === 2 ? 'active' : ''}}" bindtap="switchTab" data-index="2" hover-class="none">
+      <view class="icon-image">
+        <text class="icon-text">泥人</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 内容展示区域 -->
+  <view class="content-area">
+    <view class="content-box" style="opacity: {{contentVisible ? 1 : 0}}; transform: translateY({{contentVisible ? 0 : '20rpx'}});">
+      <view class="content-title">{{titles[currentTab]}}</view>
+      <view class="content-list" style="opacity: {{contentVisible ? 1 : 0}};">
+        <block wx:if="{{currentTab === 0}}">
+          <!-- 泥塑产品内容 -->
+          <scroll-view scroll-y class="product-grid">
+            <view class="product-wrapper">
+              <view class="product-card">
+                <image class="product-image" mode="aspectFill" src="../../assets/images/12生肖/机灵鼠.jpg"></image>
+                <view class="product-info">
+                  <text class="product-name">机灵鼠</text>
+                </view>
+              </view>
+              <view class="product-card">
+                <image class="product-image" mode="aspectFill" src="../../assets/images/12生肖/勤劳牛.jpg"></image>
+                <view class="product-info">
+                  <text class="product-name">勤劳牛</text>
+                </view>
+              </view>
+              <view class="product-card">
+                <image class="product-image" mode="aspectFill" src="../../assets/images/12生肖/招财虎.jpg"></image>
+                <view class="product-info">
+                  <text class="product-name">招财虎</text>
+                </view>
+              </view>
+              <view class="product-card">
+                <image class="product-image" mode="aspectFill" src="../../assets/images/12生肖/柔良兔.jpg"></image>
+                <view class="product-info">
+                  <text class="product-name">柔良兔</text>
+                </view>
+              </view>
+              <view class="product-card">
+                <image class="product-image" mode="aspectFill" src="../../assets/images/12生肖/勇猛龙.jpg"></image>
+                <view class="product-info">
+                  <text class="product-name">勇猛龙</text>
+                </view>
+              </view>
+              <view class="product-card">
+                <image class="product-image" mode="aspectFill" src="../../assets/images/12生肖/聪慧蛇.jpg"></image>
+                <view class="product-info">
+                  <text class="product-name">聪慧蛇</text>
+                </view>
+              </view>
+              <view class="product-card">
+                <image class="product-image" mode="aspectFill" src="../../assets/images/12生肖/平安马.jpg"></image>
+                <view class="product-info">
+                  <text class="product-name">平安马</text>
+                </view>
+              </view>
+              <view class="product-card">
+                <image class="product-image" mode="aspectFill" src="../../assets/images/12生肖/温良羊.jpg"></image>
+                <view class="product-info">
+                  <text class="product-name">温良羊</text>
+                </view>
+              </view>
+              <view class="product-card">
+                <image class="product-image" mode="aspectFill" src="../../assets/images/12生肖/机智猴.jpg"></image>
+                <view class="product-info">
+                  <text class="product-name">机智猴</text>
+                </view>
+              </view>
+              <view class="product-card">
+                <image class="product-image" mode="aspectFill" src="../../assets/images/12生肖/啼辰鸡.jpg"></image>
+                <view class="product-info">
+                  <text class="product-name">啼辰鸡</text>
+                </view>
+              </view>
+              <view class="product-card">
+                <image class="product-image" mode="aspectFill" src="../../assets/images/12生肖/旺财狗.jpg"></image>
+                <view class="product-info">
+                  <text class="product-name">旺财狗</text>
+                </view>
+              </view>
+              <view class="product-card">
+                <image class="product-image" mode="aspectFill" src="../../assets/images/12生肖/聚财猪.jpg"></image>
+                <view class="product-info">
+                  <text class="product-name">聚财猪</text>
+                </view>
+              </view>
+            </view>
+          </scroll-view>
+        </block>
+        <block wx:elif="{{currentTab === 1}}">
+          <!-- 挂片产品内容 -->
+          <scroll-view scroll-y class="product-grid">
+            <view class="product-wrapper">
+              <view class="product-card" wx:for="{{products.guapian}}" wx:key="id">
+                <image class="product-image" mode="aspectFill" src="{{item.image}}"></image>
+                <view class="product-info">
+                  <text class="product-name">{{item.name}}</text>
+                </view>
+              </view>
+            </view>
+          </scroll-view>
+        </block>
+        <block wx:elif="{{currentTab === 2}}">
+          <!-- 泥人产品内容 -->
+          <scroll-view scroll-y class="product-grid">
+            <view class="product-wrapper">
+              <view class="product-card">
+                <image class="product-image" mode="aspectFill" src="../../assets/images/泥人/关羽.jpg"></image>
+                <view class="product-info">
+                  <text class="product-name">关羽</text>
+                </view>
+              </view>
+              <view class="product-card">
+                <image class="product-image" mode="aspectFill" src="../../assets/images/泥人/钟馗.jpg"></image>
+                <view class="product-info">
+                  <text class="product-name">钟馗</text>
+                </view>
+              </view>
+            </view>
+          </scroll-view>
+        </block>
       </view>
     </view>
   </view>

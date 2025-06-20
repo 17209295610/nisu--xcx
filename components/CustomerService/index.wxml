@@ -1,0 +1,37 @@
+<view class="customer-service">
+  <view class="service-icon" bindtap="toggleExpand">
+    <image src="/assets/images/customer-service.png" mode="aspectFit" />
+  </view>
+
+  <view class="chat-container" wx:if="{{isExpanded}}">
+    <view class="chat-header">
+      <text>智能客服小泥人</text>
+      <view class="voice-call-btn" bindtap="startCall">
+        <image src="/assets/images/phone.png" mode="aspectFit" />
+      </view>
+    </view>
+
+    <scroll-view class="chat-body" scroll-y scroll-into-view="msg-{{messages.length-1}}">
+      <view class="message {{item.type}}" wx:for="{{messages}}" wx:key="timestamp" id="msg-{{index}}">
+        <view class="message-content">{{item.content}}</view>
+      </view>
+    </scroll-view>
+
+    <view class="chat-footer">
+      <input class="chat-input" 
+             type="text" 
+             placeholder="请输入您的问题" 
+             confirm-type="send"
+             bindconfirm="sendMessage" />
+    </view>
+  </view>
+</view>
+
+<view class="calling-mask" wx:if="{{isCalling}}">
+  <view class="calling-box">
+    <text class="calling-status">通话中...</text>
+    <view class="end-call-btn" bindtap="endCall">
+      <image src="/assets/images/end-call.png" mode="aspectFit" />
+    </view>
+  </view>
+</view> 

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "image-processor": "../../components/ImageProcessor/index"
+  }
+}
+ 

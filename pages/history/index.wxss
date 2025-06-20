@@ -1,0 +1,155 @@
+.history-container {
+  height: 100vh;
+  background-color: #f8f8f8;
+}
+
+.header {
+  padding: 40rpx 30rpx;
+  background-color: #fff;
+  text-align: center;
+  border-bottom: 1rpx solid #eee;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.subtitle {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.content {
+  padding: 30rpx;
+}
+
+.section {
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20rpx;
+  border-left: 8rpx solid #c8a675;
+  padding-left: 20rpx;
+}
+
+.section-image {
+  width: 100%;
+  border-radius: 10rpx;
+  margin: 20rpx 0;
+}
+
+.section-text {
+  font-size: 28rpx;
+  color: #666;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* 时间线样式 */
+.timeline {
+  margin: 30rpx 0;
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 20rpx;
+  position: relative;
+  padding-left: 30rpx;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 10rpx;
+  height: 10rpx;
+  background-color: #c8a675;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.time {
+  width: 120rpx;
+  font-size: 28rpx;
+  color: #c8a675;
+  font-weight: bold;
+}
+
+.event {
+  flex: 1;
+  font-size: 28rpx;
+  color: #666;
+}
+
+/* 特色列表样式 */
+.feature-list {
+  margin-top: 20rpx;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15rpx;
+}
+
+.feature-dot {
+  color: #c8a675;
+  margin-right: 10rpx;
+  font-size: 28rpx;
+}
+
+/* 文化价值网格样式 */
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20rpx;
+  margin-top: 20rpx;
+}
+
+.value-item {
+  background-color: #f8f8f8;
+  padding: 20rpx;
+  border-radius: 10rpx;
+}
+
+.value-title {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.value-desc {
+  font-size: 26rpx;
+  color: #666;
+}
+
+/* 保护措施列表样式 */
+.protection-list {
+  margin-top: 20rpx;
+}
+
+.protection-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15rpx;
+}
+
+.protection-dot {
+  color: #c8a675;
+  margin-right: 10rpx;
+  font-weight: bold;
+  font-size: 28rpx;
+}

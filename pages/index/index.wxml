@@ -16,4 +16,52 @@
       </swiper-item>
     </swiper>
   </view>
+
+  <!-- 快捷导航模块 -->
+  <view class="quick-nav-section">
+    <view class="quick-nav-grid">
+      <!-- 左侧历史文化 -->
+      <view class="nav-item nav-item-large" bindtap="goToHistory">
+        <image src="{{quickNavList[0].icon}}" mode="aspectFill" class="nav-image"/>
+        <text class="nav-text">历史文化</text>
+      </view>
+      <!-- 右侧两个导航 -->
+      <view class="nav-right">
+        <view class="nav-item nav-item-small" bindtap="goToInheritor">
+          <image src="{{quickNavList[1].icon}}" mode="aspectFill" class="nav-image"/>
+          <text class="nav-text">传承人</text>
+        </view>
+                  <view class="nav-item nav-item-small" bindtap="goToMaking">
+          <image src="{{quickNavList[2].icon}}" mode="aspectFill" class="nav-image"/>
+          <text class="nav-text">制作工艺</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 分类展示区 -->
+  <view class="category-section">
+    <!-- 泥玩具专区 -->
+    <view class="category-item" bindtap="onCategoryTap" data-type="toy">
+      <image src="{{categoryImages.zodiac}}" mode="aspectFill" class="category-image"/>
+      <view class="category-title">凤翔泥塑十二生肖系列</view>
+    </view>
+
+    <!-- 挂片展区 -->
+    <view class="category-item" bindtap="onCategoryTap" data-type="hanging">
+      <image src="{{categoryImages.hanging}}" mode="aspectFill" class="category-image"/>
+      <view class="category-title">凤翔泥塑特色挂片</view>
+    </view>
+
+    <!-- 历史人物展区 -->
+    <view class="category-item" bindtap="onCategoryTap" data-type="figure">
+      <image src="{{categoryImages.figure}}" mode="aspectFill" class="category-image"/>
+      <view class="category-title">凤翔泥塑历史人物</view>
+    </view>
+  </view>
+
+  <!-- 底部导航指示器 -->
+  <view class="bottom-indicator">
+    <view class="indicator-dot" wx:for="{{3}}" wx:key="index"></view>
+  </view>
 </view> 

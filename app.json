@@ -1,18 +1,23 @@
 {
-  "pages": ["pages/index/index", "pages/creation/index", "pages/product/index"],
+  "pages": [
+    "pages/index/index",
+    "pages/create/index",
+    "pages/product/index",
+    "pages/history/index",
+    "pages/inheritor/index",
+    "pages/making/index"
+  ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#4A3428",
+    "navigationBarBackgroundColor": "#7C8B7D",
     "navigationBarTitleText": "泥遇AI：智能泥塑创想馆",
-    "navigationBarTextStyle": "white",
-    "enablePullDownRefresh": true
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "custom": false,
-    "color": "#999999",
-    "selectedColor": "#8B4513",
-    "backgroundColor": "#ffffff",
-    "borderStyle": "black",
+    "color": "#E0E0E0",
+    "selectedColor": "#FFFFFF",
+    "backgroundColor": "#7C8B7D",
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -21,7 +26,7 @@
         "selectedIconPath": "assets/images/tabbar/首页.png"
       },
       {
-        "pagePath": "pages/creation/index",
+        "pagePath": "pages/create/index",
         "text": "创作",
         "iconPath": "assets/images/tabbar/创作.png",
         "selectedIconPath": "assets/images/tabbar/创作.png"

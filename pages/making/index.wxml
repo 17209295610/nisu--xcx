@@ -1,0 +1,87 @@
+<scroll-view scroll-y class="making-container">
+  <!-- 顶部装饰图案 -->
+  <view class="decorative-pattern"></view>
+
+  <!-- 顶部标题区域 -->
+  <view class="header">
+    <view class="title-container">
+      <view class="main-title">凤翔泥塑制作工艺</view>
+      <view class="sub-title">千年技艺 · 匠心传承</view>
+    </view>
+    <!-- 装饰分割线 -->
+    <view class="divider">
+      <view class="divider-line"></view>
+      <view class="divider-dot"></view>
+      <view class="divider-line"></view>
+    </view>
+  </view>
+
+  <!-- 工艺流程图 -->
+  <view class="process-timeline">
+    <view class="timeline-line"></view>
+    <view class="timeline-nodes">
+      <view wx:for="{{[1,2,3,4,5,6,7,8,9,10,11]}}" wx:key="*this" 
+            class="timeline-node {{currentStep >= item ? 'active' : ''}}"
+            bindtap="jumpToStep" data-step="{{item}}">
+        {{item}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 制作步骤展示区 -->
+  <swiper class="steps-swiper" 
+          bindchange="onSwiperChange" 
+          current="{{currentStep-1}}"
+          duration="400">
+    <swiper-item wx:for="{{steps}}" wx:key="id">
+      <view class="step-card {{currentStep === item.id ? 'active' : ''}}">
+        <!-- 步骤图片 -->
+        <view class="step-image-container">
+          <image src="{{item.image}}" 
+                 mode="aspectFill" 
+                 class="step-image {{currentStep === item.id ? 'active' : ''}}"
+                 bindtap="previewImage"
+                 data-url="{{item.image}}"/>
+          <view class="step-number">{{item.id}}/11</view>
+        </view>
+        
+        <!-- 步骤信息 -->
+        <view class="step-info">
+          <view class="step-header">
+            <view class="step-title">{{item.title}}</view>
+            <view class="step-progress">
+              <view class="progress-bar">
+                <view class="progress-inner" style="width: {{item.id/11*100}}%"></view>
+              </view>
+            </view>
+          </view>
+          <view class="step-description">{{item.description}}</view>
+        </view>
+
+        <!-- 操作按钮 -->
+        <view class="step-actions">
+          <view class="action-btn prev {{item.id === 1 ? 'disabled' : ''}}" 
+                bindtap="prevStep" wx:if="{{item.id > 1}}">
+            <text class="btn-icon">←</text> 上一步
+          </view>
+          <view class="action-btn next {{item.id === 11 ? 'disabled' : ''}}" 
+                bindtap="nextStep" wx:if="{{item.id < 11}}">
+            下一步 <text class="btn-icon">→</text>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+
+  <!-- 底部提示 -->
+  <view class="footer-tips">
+    <view class="tip-item">
+      <text class="tip-icon">💡</text>
+      <text class="tip-text">点击图片可放大查看详情</text>
+    </view>
+    <view class="tip-item">
+      <text class="tip-icon">👆</text>
+      <text class="tip-text">点击时间轴数字可快速跳转</text>
+    </view>
+  </view>
+</scroll-view> 

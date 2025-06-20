@@ -1,0 +1,11 @@
+.image-processor {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.processed-image {
+  width: 100%;
+  max-width: 500rpx;
+}

@@ -1,0 +1,140 @@
+<scroll-view scroll-y class="history-container">
+  <!-- 顶部标题区域 -->
+  <view class="header">
+    <view class="title">凤翔泥塑历史文化</view>
+    <view class="subtitle">陕西省非物质文化遗产</view>
+  </view>
+
+  <!-- 内容区域 -->
+  <view class="content">
+    <!-- 历史渊源 -->
+    <view class="section">
+      <view class="section-title">历史渊源</view>
+      <image 
+        src="../../assets/images/default-banner.png" 
+        mode="widthFix" 
+        class="section-image"
+        binderror="onImageError"
+        data-index="0"
+      />
+      <view class="section-text">
+        凤翔泥塑，发源于陕西省宝鸡市凤翔区，历史可追溯至汉代，距今已有两千多年历史。作为陕西省非物质文化遗产，凤翔泥塑以其独特的艺术风格和深厚的文化底蕴闻名于世。
+      </view>
+    </view>
+
+    <!-- 发展历程 -->
+    <view class="section">
+      <view class="section-title">发展历程</view>
+      <view class="timeline">
+        <view class="timeline-item">
+          <view class="time">汉代</view>
+          <view class="event">凤翔泥塑起源，最早用于祭祀活动</view>
+        </view>
+        <view class="timeline-item">
+          <view class="time">唐代</view>
+          <view class="event">与佛教艺术结合，技艺得到进一步发展</view>
+        </view>
+        <view class="timeline-item">
+          <view class="time">明清时期</view>
+          <view class="event">形成独特的艺术风格，成为民间艺术重要流派</view>
+        </view>
+        <view class="timeline-item">
+          <view class="time">现代</view>
+          <view class="event">被列入陕西省非物质文化遗产名录，得到保护和传承</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 艺术特色 -->
+    <view class="section">
+      <view class="section-title">艺术特色</view>
+      <image 
+        src="../../assets/images/default-banner.png" 
+        mode="widthFix" 
+        class="section-image"
+        binderror="onImageError"
+        data-index="1"
+      />
+      <view class="section-text">
+        凤翔泥塑以其造型生动、色彩艳丽、题材丰富而著称。主要特点包括：
+      </view>
+      <view class="feature-list">
+        <view class="feature-item">
+          <text class="feature-dot">•</text>
+          <text>造型夸张写实，突出人物性格特征</text>
+        </view>
+        <view class="feature-item">
+          <text class="feature-dot">•</text>
+          <text>色彩浓艳明快，具有浓郁的民间特色</text>
+        </view>
+        <view class="feature-item">
+          <text class="feature-dot">•</text>
+          <text>制作工艺精湛，注重细节表现</text>
+        </view>
+        <view class="feature-item">
+          <text class="feature-dot">•</text>
+          <text>题材广泛，涵盖历史人物、民间故事等</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 文化价值 -->
+    <view class="section">
+      <view class="section-title">文化价值</view>
+      <view class="section-text">
+        凤翔泥塑不仅是一种传统手工艺，更是中国民间艺术的瑰宝。它承载着：
+      </view>
+      <view class="value-grid">
+        <view class="value-item">
+          <view class="value-title">历史价值</view>
+          <view class="value-desc">记录了不同历史时期的社会生活</view>
+        </view>
+        <view class="value-item">
+          <view class="value-title">艺术价值</view>
+          <view class="value-desc">展现了独特的民间艺术审美</view>
+        </view>
+        <view class="value-item">
+          <view class="value-title">文化价值</view>
+          <view class="value-desc">传承了中国传统文化精髓</view>
+        </view>
+        <view class="value-item">
+          <view class="value-title">教育价值</view>
+          <view class="value-desc">为现代艺术教育提供借鉴</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 传承保护 -->
+    <view class="section">
+      <view class="section-title">传承保护</view>
+      <image 
+        src="../../assets/images/default-banner.png" 
+        mode="widthFix" 
+        class="section-image"
+        binderror="onImageError"
+        data-index="2"
+      />
+      <view class="section-text">
+        为了保护和传承这一宝贵的文化遗产，目前采取了以下措施：
+      </view>
+      <view class="protection-list">
+        <view class="protection-item">
+          <text class="protection-dot">1.</text>
+          <text>建立传承人制度，确保技艺代代相传</text>
+        </view>
+        <view class="protection-item">
+          <text class="protection-dot">2.</text>
+          <text>开展培训教育，培养新一代传承人</text>
+        </view>
+        <view class="protection-item">
+          <text class="protection-dot">3.</text>
+          <text>举办展览展示，扩大社会影响</text>
+        </view>
+        <view class="protection-item">
+          <text class="protection-dot">4.</text>
+          <text>进行数字化记录，永久保存工艺特色</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view> 

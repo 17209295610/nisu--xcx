@@ -1,0 +1,54 @@
+<!-- 创作页面 -->
+<view class="create-container">
+  <!-- 顶部操作栏 -->
+  <view class="top-bar">
+    <view class="title">AI创作</view>
+  </view>
+
+  <!-- 创作区域 -->
+  <view class="creation-area">
+    <!-- 左侧工具栏 -->
+    <view class="tools-panel">
+      <view class="tool-item" bindtap="selectTool" data-tool="sketch">
+        <!-- <image src="/assets/images/icons/pencil.png" mode="aspectFit"></image> -->
+        <text>草图</text>
+      </view>
+      <view class="tool-item" bindtap="selectTool" data-tool="text">
+        <!-- <image src="/assets/images/icons/text.png" mode="aspectFit"></image> -->
+        <text>文字</text>
+      </view>
+      <view class="tool-item" bindtap="selectTool" data-tool="reference">
+        <!-- <image src="/assets/images/icons/image.png" mode="aspectFit"></image> -->
+        <text>参考</text>
+      </view>
+    </view>
+
+    <!-- 中央画布区域 -->
+    <view class="canvas-area">
+      <canvas type="2d" id="mainCanvas" class="main-canvas"></canvas>
+    </view>
+
+    <!-- 右侧AI助手面板 -->
+    <view class="ai-panel">
+      <view class="ai-header">
+        <text>AI助手</text>
+      </view>
+      <view class="ai-input-area">
+        <textarea placeholder="描述您想创作的泥塑作品..." bindinput="onAIInputChange"></textarea>
+        <button class="generate-btn" bindtap="generateWithAI">AI生成</button>
+      </view>
+      <view class="ai-suggestions">
+        <text class="suggestion-title">创作建议</text>
+        <view class="suggestion-list">
+          <!-- AI建议将动态插入这里 -->
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部操作栏 -->
+  <view class="bottom-bar">
+    <button class="action-btn save-btn" bindtap="saveCreation">保存</button>
+    <button class="action-btn share-btn" bindtap="shareCreation">分享</button>
+  </view>
+</view> 

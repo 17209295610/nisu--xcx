@@ -17,11 +17,22 @@
   "author": "泥遇AI团队",
   "license": "MIT",
   "dependencies": {
-    "@vant/weapp": "^1.10.19",
+    "@babel/runtime": "^7.27.6",
+    "@vant/weapp": "^1.11.7",
     "miniprogram-api-promise": "^1.0.4"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
+    "miniprogram-api-typings": "^4.0.7",
     "prettier": "^3.0.0"
-  }
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/17209295610/nisu--xcx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/17209295610/nisu--xcx/issues"
+  },
+  "homepage": "https://github.com/17209295610/nisu--xcx#readme"
 }

@@ -1,0 +1,77 @@
+<scroll-view scroll-y class="inheritor-container">
+  <!-- 顶部标题 -->
+  <view class="header">
+    <view class="title">凤翔泥塑传承人</view>
+    <view class="subtitle">胡深世家技艺传承</view>
+  </view>
+
+  <!-- 传承人介绍 -->
+  <view class="content">
+    <!-- 胡深 -->
+    <view class="inheritor-section">
+      <view class="inheritor-header">
+        <image src="{{huShenImage}}" mode="aspectFill" class="inheritor-avatar" binderror="onImageError" data-type="huShenImage"/>
+        <view class="inheritor-info">
+          <view class="inheritor-name">胡深（1931-2019）</view>
+          <view class="inheritor-title">凤翔泥塑国家级代表性传承人</view>
+        </view>
+      </view>
+      <view class="inheritor-desc">
+        <text>胡深先生是凤翔泥塑国家级代表性传承人，师从其父胡克勤，是胡氏泥塑第四代传承人。他坚持认为泥塑作为民间艺术应该保留"土味"，这种"土味"来自传承已久的技艺和持之以恒的热爱。</text>
+        <text class="achievement">主要成就：</text>
+        <view class="achievement-item">• 2002年设计的"生肖马"被选为邮票图案</view>
+        <view class="achievement-item">• 2003年与胡新民共同创作的"生肖羊"被选为邮票图案</view>
+        <view class="achievement-item">• 作品被中国美术馆等多家博物馆收藏</view>
+      </view>
+    </view>
+
+    <!-- 胡小红 -->
+    <view class="inheritor-section">
+      <view class="inheritor-header">
+        <image src="{{huXiaohongImage}}" mode="aspectFill" class="inheritor-avatar" binderror="onImageError" data-type="huXiaohongImage"/>
+        <view class="inheritor-info">
+          <view class="inheritor-name">胡小红</view>
+          <view class="inheritor-title">凤翔泥塑县级代表性传承人</view>
+        </view>
+      </view>
+      <view class="inheritor-desc">
+        <text>胡小红女士是胡深之女，胡氏泥塑第五代传承人，陕西省工艺美术大师。她从小在浓厚的民艺氛围中成长，完整传承了凤翔泥塑的传统技艺。</text>
+        <text class="achievement">主要工作：</text>
+        <view class="achievement-item">• 担任多所艺术院校的实践教学任务</view>
+        <view class="achievement-item">• 其工作室被授予凤翔泥塑教学基地称号</view>
+        <view class="achievement-item">• 致力于传统泥塑的复原工作</view>
+      </view>
+    </view>
+
+    <!-- 韩建斌 -->
+    <view class="inheritor-section">
+      <view class="inheritor-header">
+        <image src="{{hanJianbinImage}}" mode="aspectFill" class="inheritor-avatar" binderror="onImageError" data-type="hanJianbinImage"/>
+        <view class="inheritor-info">
+          <view class="inheritor-name">韩建斌</view>
+          <view class="inheritor-title">胡深世家第六代传承人</view>
+        </view>
+      </view>
+      <view class="inheritor-desc">
+        <text>韩建斌是胡小红之子，胡深的外孙，从小跟随外公胡深和母亲胡小红学习凤翔泥塑。作为新一代传承人，他在传承传统技艺的同时积极创新。</text>
+        <text class="achievement">创新成果：</text>
+        <view class="achievement-item">• 将泥塑元素与现代时尚设计结合</view>
+        <view class="achievement-item">• 开发泥塑主题文创产品</view>
+        <view class="achievement-item">• 推动凤翔泥塑与国潮文化的融合</view>
+        <view class="achievement-item">• 参与复原86件传统泥塑作品</view>
+      </view>
+    </view>
+
+    <!-- 传承理念 -->
+    <view class="philosophy-section">
+      <view class="section-title">传承理念</view>
+      <view class="philosophy-content">
+        <text>胡深世家秉承"三分塑，七分彩"的技艺特点，强调：</text>
+        <view class="philosophy-item">• 保持民间艺术的"土味"本色</view>
+        <view class="philosophy-item">• 坚持"随机应变、随方就圆"的创作原则</view>
+        <view class="philosophy-item">• 注重技艺的完整传承</view>
+        <view class="philosophy-item">• 推动传统与现代的融合创新</view>
+      </view>
+    </view>
+  </view>
+</scroll-view> 
